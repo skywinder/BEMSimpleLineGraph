@@ -110,7 +110,7 @@
     _labelFont = [UIFont fontWithName:DEFAULT_FONT_NAME size:13];
     
     // Set Animation Values
-    _animationGraphEntranceTime = 1.5;
+    _animationGraphEntranceTime = BEMDefaultAnimationTime;
     
     // Set Color Values
     _colorXaxisLabel = [UIColor blackColor];
@@ -875,6 +875,8 @@
     _animationGraphStyle = animationGraphStyle;
     if (_animationGraphStyle == BEMLineAnimationNone)
         self.animationGraphEntranceTime = 0.f;
+    else
+        self.animationGraphEntranceTime = BEMDefaultAnimationTime;
 }
 
 
