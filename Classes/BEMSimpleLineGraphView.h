@@ -25,8 +25,6 @@
 @protocol BEMSimpleLineGraphDelegate;
 @protocol BEMSimpleLineGraphDataSource;
 
-static const float BEMDefaultAnimationTime = 1.5f;
-
 /// Simple line graph / chart UIView subclass for iOS apps. Creates beautiful line graphs (without huge memory impacts) using QuartzCore.
 @interface BEMSimpleLineGraphView : UIView <UIGestureRecognizerDelegate>
 

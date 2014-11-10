@@ -17,6 +17,8 @@
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define DEFAULT_FONT_NAME @"HelveticaNeue-Light"
 
+static const float BEMDefaultAnimationTime = 1.5f;
+
 @interface BEMSimpleLineGraphView () {
     /// The number of Points in the Graph
     NSInteger numberOfPoints;
