@@ -51,9 +51,6 @@
     self.myGraph.enableReferenceYAxisLines = YES;
     self.myGraph.enableReferenceAxisFrame = YES;
 
-    //setup initial selectet segment
-    self.curveChoice.selectedSegmentIndex = self.myGraph.enableBezierCurve;
-
     // The labels to report the values of the graph when the user touches it
     self.labelValues.text = [NSString stringWithFormat:@"%i", [[self.myGraph calculatePointValueSum] intValue]];
     self.labelDates.text = @"between 2000 and 2010";
