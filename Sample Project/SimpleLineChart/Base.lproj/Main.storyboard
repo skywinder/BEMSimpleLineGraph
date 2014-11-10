@@ -84,7 +84,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kVE-WH-ilw">
                                 <rect key="frame" x="126" y="454" width="178" height="29"/>
                                 <segments>
-                                    <segment title="Fade"/>
+                                    <segment title="Draw"/>
                                     <segment title="Draw"/>
                                     <segment title="None"/>
                                 </segments>
