@@ -85,7 +85,7 @@
                                 <rect key="frame" x="126" y="454" width="178" height="29"/>
                                 <segments>
                                     <segment title="Draw"/>
-                                    <segment title="Draw"/>
+                                    <segment title="Fade"/>
                                     <segment title="None"/>
                                 </segments>
                                 <connections>
