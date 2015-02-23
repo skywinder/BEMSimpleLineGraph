@@ -20,7 +20,7 @@
 
 #import "BEMCircle.h"
 #import "BEMLine.h"
-
+#import "BEMPermanentPopupView.h"
 
 @protocol BEMSimpleLineGraphDelegate;
 @protocol BEMSimpleLineGraphDataSource;
@@ -197,6 +197,10 @@
 @property (nonatomic) CGFloat alphaBottom;
 
 
+/// Fill gradient of the bottom part of the graph (between the line and the X-axis). When set, it will draw a gradient over top of the fill provided by the \p colorBottom and \p alphaBottom properties.
+@property (assign, nonatomic) CGGradientRef gradientBottom;
+
+
 /// Color of the top part of the graph (between the line and the top of the view the graph is drawn in).
 @property (strong, nonatomic) UIColor *colorTop;
 
@@ -205,9 +209,17 @@
 @property (nonatomic) CGFloat alphaTop;
 
 
+/// Fill gradient of the top part of the graph (between the line and the top of the view the graph is drawn in). When set, it will draw a gradient over top of the fill provided by the \p colorTop and \p alphaTop properties.
+@property (assign, nonatomic) CGGradientRef gradientTop;
+
 /// Color of the line of the graph.
 @property (strong, nonatomic) UIColor *colorLine;
 
+/// Fill gradient of the line of the graph, which will be scaled to the length of the graph. Overrides the line color provided by \p colorLine
+@property (assign, nonatomic) CGGradientRef gradientLine;
+
+/// The drawing direction of the line gradient color, which defaults to horizontal
+@property (nonatomic) BEMLineGradientDirection gradientLineDirection;
 
 /// Alpha of the line of the graph.
 @property (nonatomic) CGFloat alphaLine;
@@ -361,6 +373,11 @@
  @param graph The graph object for the NO DATA label
  @return The boolean value indicating the availability of the NO DATA label. */
 - (BOOL)noDataLabelEnableForLineGraph:(BEMSimpleLineGraphView *)graph;
+
+/** Optional method to control the text to be displayed on NO DATA label
+ @param graph The graph object for the NO DATA label
+ @return The text to show on the NO DATA label. */
+- (NSString *)noDataLabelTextForLineGraph:(BEMSimpleLineGraphView *)graph;
 
 /** Optional method to set the static padding distance between the graph line and the whole graph
  @param graph The graph object requesting the padding value.
